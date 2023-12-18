@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <style>
+        body{
+            background-color: rgba(113, 224, 224, 0.5);
+            padding: 10%;
+            margin: 3%;
+        }
+        label{
+            display: inline-block;
+            width: 50%;
+            
+        }
+        input{
+            height : 20px;
+            width: 200px;
+            position: relative;
+            left: 13%;
+            border: 2px solid rgb(131, 151, 105);
+            border-radius: 20px;
+            text-indent: 10px;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            background-color: rgb(163, 93, 165);
+            position: relative;
+            
+            border-radius: 20px;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 18px;
+            overflow: auto;
+        }
+        button:hover{
+            background-color: rgba(163, 93, 165, 0.8);
+        }
+        button:active{
+            background-color: rgba(163, 93, 165, 0.5);
+            
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            position: relative;
+            border: 2px dashed lightblue;
+            
+        }
+        #myDiv{
+            background-color: rgb(173, 201, 49);
+            height: 100px;
+            width: 100px;
+            position:relative;
+            
+            right: auto;
+           
+        }
+
+    </style>
+    <title>Exercice 1</title>
+</head>
+<body style="display: flex;  flex-direction: column;
+align-items: flex-start;">
+    <button id="myButton">Click me !</button><br><br>
+    <div id="myDiv"></div>
+    
+    <script src="animation.js"></script>
+</body>
+</html>
