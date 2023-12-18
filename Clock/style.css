@@ -1,0 +1,51 @@
+body{
+    background-image: url("USA__New_York__Skyline.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+#container{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(70, 70, 70, 0.737);
+    /* border: 2px solid red; */
+    width: 500px;
+    
+}  
+#displayTime{
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 60px;
+    color: hsl(161, 83%, 46%);
+    font-family: 'consolas';
+    backdrop-filter: blur(10px);
+    
+}
+#displayTime:hover{
+    border: 3px solid lightblue;
+}
+#para1, #para2{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: hsl(200, 83%, 46%);
+    font-family: 'consolas';
+    /* backdrop-filter: blur(10px); */
+}
+label{
+    text-align: center;
+    font-size: 12px;
+    color: hsl(200, 83%, 46%);
+    font-family: 'consolas';
+    display: inline-block;
+    backdrop-filter: blur(10px);
+}
+label:hover{
+    font-size: 20px;
+    border-bottom: 2px solid lightblue;
+}
