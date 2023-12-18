@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    background-image: url('blackSky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#container{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background:linear-gradient(23deg,hsla(106, 63%, 57%, 0.664), pink, rgba(211, 211, 27, 0.632));
+    backdrop-filter: blur(100px);
+}
+#container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+    border-radius: 20px;
+    background: inherit;
+    filter: blur(15px);
+}
+#displayScreen{
+    padding-bottom: 17px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsla(0, 5%, 33%, 0.826);
+    height: 65px;
+    width: 270px;
+    position: relative;
+    left:2.5%;
+    top: 6px;
+    text-align: right;
+    text-indent: 3px;
+    font-size: 80px;
+    font-family: 'seven segment';
+    overflow: hidden;
+    color: rgb(28, 26, 26)
+}
+
+button{
+    height: 65px;
+    width: 65px;
+    font-size: 40px;
+    border-radius: 20px;
+    font-family: 'consolas';
+    margin: 2px;
+    border: 5px double hsla(178, 83%, 44%, 0.737);
+    cursor: pointer;
+}
+button:hover{
+    border: 5px solid rgb(192, 225, 238);
+    background-color: rgba(217, 219, 219, 0.006);
+    color:hsl(224, 15%, 14%)
+}
+button:active{
+    border: 5px solid hsl(197, 41%, 65%, 0.8);
+    background-color: rgba(217, 219, 219, 0.006);
+    color:hsl(224, 15%, 14%);
+    background-color: hsla(194, 45%, 94%, 0.2);
+}
+.digitButton{
+    background-color: hsla(0, 8%, 3%, 0.75);
+    color:white;
+}
