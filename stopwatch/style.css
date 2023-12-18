@@ -1,0 +1,68 @@
+body{
+    display: flex;  
+    flex-direction: column; 
+    align-items: center;
+    background-color: rgb(30, 48, 48);
+}
+#container{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(18, 21, 18, 0.737);
+    width: 550px;
+    padding: 20px;
+}
+#displayTime{
+    width: 100%;
+    text-align: justify;
+    text-indent: 45px;
+    font-size: 90px;
+    color: hsl(0, 81%, 38%);
+    font-family: 'seven segment', 'MV Boli';
+}
+
+#startButton{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    color: hsl(0, 81%, 38%);
+    background-color: hsla(223, 23%, 6%, 0.479);
+    cursor: pointer;
+    font-family: 'consolas';
+}
+#pauseButton{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    color: hsl(0, 81%, 38%);
+    background-color: hsla(223, 23%, 6%, 0.479);
+    cursor: pointer;
+    font-family: 'consolas';
+}
+#resetButton{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    color: hsl(0, 81%, 38%);
+    background-color: hsla(223, 23%, 6%, 0.479);
+    cursor: pointer;
+    font-family: 'consolas';
+}
+
+#startButton:hover, #pauseButton:hover, #resetButton:hover{
+    border: 3px solid lightblue;
+}
+
+#startButton:active, #pauseButton:active, #resetButton:active{
+    border: 3px solid lightblue;
+    background-color: skyblue
+}
+#stopwatch{
+    height: 190px;
+    width: 200px;
+    
+}
+
