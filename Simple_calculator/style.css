@@ -13,7 +13,8 @@ body{
     padding: 10px;
     text-align: center;
     background:linear-gradient(23deg,hsla(106, 63%, 57%, 0.664), pink, rgba(211, 211, 27, 0.632));
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    
 }
 #container::before {
     content: '';
@@ -39,7 +40,7 @@ body{
     top: 6px;
     text-align: right;
     text-indent: 3px;
-    font-size: 80px;
+    font-size: 70px;
     font-family: 'seven segment';
     overflow: hidden;
     color: rgb(28, 26, 26)
