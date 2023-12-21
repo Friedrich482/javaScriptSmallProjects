@@ -1,26 +1,26 @@
-let displayScreen = document.getElementById('displayScreen')
+let displayScreen = document.getElementById('displayScreen');
 let egal = false;
 function appendToDisplay(element){
     if(egal){
         clearDisplay();
         egal = false;
     }
-    displayScreen.textContent += element
+    displayScreen.textContent += element;
 }
 
 function clearDisplay(){
-    displayScreen.textContent = ""
+    displayScreen.textContent = "";
 }
 
 function calculate(){
     try{
-        console.log()
+        
         if(String(eval(displayScreen.textContent)).length > 8){
-            displayScreen.textContent = eval(displayScreen.textContent).toFixed(7)
+            displayScreen.textContent = eval(displayScreen.textContent).toFixed(7);
             egal = true;
         }
         else{
-            displayScreen.textContent = eval(displayScreen.textContent)
+            displayScreen.textContent = eval(displayScreen.textContent);
             egal = true;
         }
     }
@@ -35,22 +35,23 @@ function managePar(){
     par.forEach(elt => elt.addEventListener('click', () =>{
         let value = elt.textContent;
         if(value == '('){
-            displayScreen.textContent += value
+            displayScreen.textContent += value;
         }
         else{
-            displayScreen.textContent += value
+            displayScreen.textContent += value;
         }
     }))
     
 }
-managePar()
+managePar();
 function eraser(){
     displayScreen.textContent = displayScreen.textContent.slice(0, -1);
 }
 
 //Defining a clock for the calculator
-function clock(){
-    let clock = document.getElementById('clock')
+let clock = document.getElementById('clock');
+let switched = false;
+function clocker(){
     let date = new Date();
     let hours = date.getHours();
     let minutes = date.getMinutes();
@@ -64,7 +65,21 @@ function clock(){
     minutes = pad(minutes);
     seconds = pad(seconds);
 
-    clock.textContent = `${hours}:${minutes}:${seconds}`
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-setInterval(clock, 1000);
+let realTime = setInterval(clocker, 1000);
+
+clock.addEventListener('click', () =>{
+    if(!switched){
+        let date = new Date();
+        clock.textContent = date.toLocaleDateString();
+        clearInterval(realTime);
+        switched = true;
+    }
+    else{
+        realTime = setInterval(clocker, 1000);
+        switched = false;
+    }
+    
+})

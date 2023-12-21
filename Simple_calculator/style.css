@@ -31,7 +31,7 @@ body{
 #clock{
     border-radius: 10px;
     position: relative;
-    margin-left: 57%;
+    margin-left: 59%;
     display: inline-block;
     border: none;
     background-color: hsla(0, 3%, 42%, 0.909);
@@ -43,6 +43,10 @@ body{
     min-width: 100px;
 
 }
+#clock:hover{
+    box-shadow: 3px 3px 2px rgba(4, 9, 11, 0.836);
+}
+
 #displayScreen{
     border-radius: 10px;
     border: none;
@@ -60,6 +64,9 @@ body{
     font-family: 'seven segment';
     overflow: hidden;
     color: rgb(28, 26, 26)
+}
+#displayScreen:hover{
+    box-shadow: 3px 3px 2px rgba(4, 9, 11, 0.836);
 }
 #buttons{
     display: grid;
@@ -100,6 +107,7 @@ button:active{
 #clearButton{
     background-color: hsla(293, 74%, 17%, 0.468);
 }
+
 #clearButton:hover{
     background-color: hsla(143, 74%, 64%, 0.006);
 }
