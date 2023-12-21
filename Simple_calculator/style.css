@@ -28,16 +28,32 @@ body{
     background: inherit;
     filter: blur(15px);
 }
+#clock{
+    border-radius: 10px;
+    position: relative;
+    margin-left: 57%;
+    display: inline-block;
+    border: none;
+    background-color: hsla(0, 3%, 42%, 0.909);
+    font-family: 'seven segment';
+    font-size: 20px;
+    padding: 3px;
+    font-weight: bold;
+    color: hsl(0, 83%, 65%);
+    min-width: 100px;
+
+}
 #displayScreen{
-    padding-bottom: 17px;
     border-radius: 10px;
     border: none;
     background-color: hsla(0, 5%, 33%, 0.826);
-    height: 65px;
-    width: 270px;
+    padding: 1px;
     position: relative;
-    left:2.5%;
-    top: 6px;
+    top: 10px;
+    max-width: 350px;
+    width: 92%;
+    margin: 0 auto;
+    height: 70px;
     text-align: right;
     text-indent: 3px;
     font-size: 70px;
@@ -45,20 +61,25 @@ body{
     overflow: hidden;
     color: rgb(28, 26, 26)
 }
-
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: repeat(3, 65px);
+    gap: 8px;
+    padding: 17px;
+}
 button{
     height: 65px;
-    width: 65px;
     font-size: 40px;
     border-radius: 20px;
     font-family: 'consolas';
-    margin: 2px;
+    max-width: 65px;
     border: 5px double hsla(178, 83%, 44%, 0.737);
     cursor: pointer;
 }
 button:hover{
     border: 5px solid rgb(192, 225, 238);
-    background-color: rgba(217, 219, 219, 0.006);
+    background-color: hsla(180, 59%, 37%, 0.006);
     color:hsl(224, 15%, 14%)
 }
 button:active{
@@ -70,4 +91,15 @@ button:active{
 .digitButton{
     background-color: hsla(0, 8%, 3%, 0.75);
     color:white;
+}
+
+.commaButton{
+    padding-top: 15px;
+}
+
+#clearButton{
+    background-color: hsla(293, 74%, 17%, 0.468);
+}
+#clearButton:hover{
+    background-color: hsla(143, 74%, 64%, 0.006);
 }

@@ -11,31 +11,38 @@
 <body>
     <br><br>
     <div id="container">
+        <div id="clock">00:00:00</div>
         <div id="displayScreen"></div><br>
-        <div id="butttons">
+        <div id="buttons">
             <button class="digitButton" onclick="appendToDisplay('7')">7</button>
             <button class="digitButton" onclick="appendToDisplay('8')">8</button>
             <button class="digitButton" onclick="appendToDisplay('9')">9</button>
 
-            <button class="operationButton" onclick="appendToDisplay('/')">&div;</button><br>
+            <button class="operationButton" onclick="appendToDisplay('/')">&div;</button>
 
             <button class="digitButton" onclick="appendToDisplay('4')">4</button>
             <button class="digitButton" onclick="appendToDisplay('5')">5</button>
             <button class="digitButton" onclick="appendToDisplay('6')">6</button>
 
-            <button class="operationButton" onclick="appendToDisplay('*')">&times;</button><br>
+            <button class="operationButton" onclick="appendToDisplay('*')">&times;</button>
 
             <button class="digitButton" onclick="appendToDisplay('1')">1</button>
             <button class="digitButton" onclick="appendToDisplay('2')">2</button>
             <button class="digitButton" onclick="appendToDisplay('3')">3</button>
 
-            <button class="operationButton" onclick="appendToDisplay('-')">&minus;</button><br>
+            <button class="operationButton" onclick="appendToDisplay('-')">&minus;</button>
             
             <button class="digitButton" onclick="appendToDisplay('0')">0</button>
+            <button class="commaButton" onclick="appendToDisplay('.')">&dot;</button>
             <button id="clearButton" onclick="clearDisplay()">C</button>
+            <button class="operationButton" onclick="appendToDisplay('+')">&plus;</button>
+            
+           
+            <button class="parButton">&lpar;</button>
+            <button class="parButton">&rpar;</button>
+            
+            <button class="eraseButton" onclick="eraser()">&LeftArrow;</button>
             <button class="equalityButton" onclick="calculate()">&equals;</button>
-            <button class="operationButton" onclick="appendToDisplay('+')">&plus;</button><br>
-
         </div>
     </div>
     

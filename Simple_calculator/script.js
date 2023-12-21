@@ -15,8 +15,8 @@ function clearDisplay(){
 function calculate(){
     try{
         console.log()
-        if(String(eval(displayScreen.textContent)).length > 7){
-            displayScreen.textContent = eval(displayScreen.textContent).toFixed(6)
+        if(String(eval(displayScreen.textContent)).length > 8){
+            displayScreen.textContent = eval(displayScreen.textContent).toFixed(7)
             egal = true;
         }
         else{
@@ -30,3 +30,41 @@ function calculate(){
     }
 }
 
+function managePar(){
+    let par = document.querySelectorAll('.parButton');
+    par.forEach(elt => elt.addEventListener('click', () =>{
+        let value = elt.textContent;
+        if(value == '('){
+            displayScreen.textContent += value
+        }
+        else{
+            displayScreen.textContent += value
+        }
+    }))
+    
+}
+managePar()
+function eraser(){
+    displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+}
+
+//Defining a clock for the calculator
+function clock(){
+    let clock = document.getElementById('clock')
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+
+    function pad(unit){
+        return unit < 10 ? '0' + unit : unit;
+    }
+
+    hours = pad(hours);
+    minutes = pad(minutes);
+    seconds = pad(seconds);
+
+    clock.textContent = `${hours}:${minutes}:${seconds}`
+}
+
+setInterval(clock, 1000);
