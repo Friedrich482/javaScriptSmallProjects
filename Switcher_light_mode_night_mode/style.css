@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#checkBox{
+    visibility: hidden;
+}
+
+#round{
+    background-color: rgb(10, 10, 10);
+    border: 1px solid rgba(14, 13, 13, 0.954);
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sun{
+    height: 40px;
+    width: 40px;
+    user-select: none;
+}
+#checkLabel{
+    cursor: pointer;
+    margin-left: 75%;
+    display: flex;
+    background-image: url('sun_font.jpg');
+    background-size: cover;
+    min-width: 150px;
+    max-width: 200px;
+    height: 10vh;
+    border-radius: 40px;
+    padding:1px;
+    border: 3px solid rgba(67, 117, 134, 0.92);
+}
+
+#displayTitle{
+    display: block;
+    font-family: 'MV Boli';
+    color : hsl(230, 85%, 60%);
+
+}
