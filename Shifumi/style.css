@@ -1,0 +1,64 @@
+body{
+    display: grid;
+    justify-items: center;
+    gap: 12vh;
+    background-color: hsla(0, 0%, 0%, 0.82);
+}
+#gameContainer{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    border: 2px solid hsl(307, 60%, 50%);
+    min-width: 450px;
+    max-width: 550px;
+    border-radius: 30px;
+    background-color:hsl(185, 40%, 60%, 0.78)
+}
+img{
+    position: relative;
+    top: 5vh;
+    height: 160px;
+    border-radius: 20%;
+    border: 3px solid rgb(115, 182, 204)
+}
+#display{
+    font-size: 25px;
+    font-family: 'consolas';
+    font-weight: 700;
+}
+
+#buttons{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    font-family: 'MV Boli';
+    border: none;
+    font-weight: 800;
+    font-size: 19px;
+    width: 125px;
+    min-height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 2px;
+    color: whitesmoke;
+    background-color: rgba(180, 55, 90, 0.653);
+}
+button:hover{
+    border: 3px solid lightblue;
+    background-color: transparent;
+    color: hsla(0, 0%, 8%, 0.902)
+}
+
+button:active{
+    border: 3px solid rgb(66, 120, 138);
+    background-color: rgba(212, 197, 35, 0.353);;
+}
+#playerText, #computerText, #resultText{
+    min-width: 300px;
+    
+}
