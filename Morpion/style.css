@@ -18,7 +18,8 @@ h1{
 }
 
 #cells{
-    border: 5px solid rgb(36, 239, 137);
+    border: 5px solid rgb(36, 239, 232);
+    border-radius: 2px;
     display: grid;
     grid-template-columns: repeat(3, 65px);
     backdrop-filter: blur(5px);
