@@ -1,0 +1,65 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 97vh;
+    background-image: url('new_york.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    display: block;
+    font-size: 45px;
+    font-family: 'MV Boli';
+    min-width: 400px;
+    color: rgba(247, 148, 36, 0.838);
+}
+
+#cells{
+    border: 5px solid rgb(36, 239, 137);
+    display: grid;
+    grid-template-columns: repeat(3, 65px);
+    backdrop-filter: blur(5px);
+}
+.cell{
+    border: 2px solid black;
+    height: 65px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'MV Boli';
+    color: rgb(245, 245, 245);
+}
+
+#displayStatus{
+    min-width: 150px;
+    font-size: 40px;
+    text-align: center;
+    font-family: cursive;
+    backdrop-filter: blur(5px);
+    color: rgb(216, 17, 17);
+}
+#restartButton{
+    font-family: 'MV Boli';
+    min-width: 250px;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 4px solid hsl(26, 86%, 46%);
+    font-size: 30px;
+    padding: 2px;
+    min-height: 50px;
+    background-color: hsla(150, 8%, 5%, 0.833);
+    color: whitesmoke
+}
+#restartButton:hover{
+    background-color: transparent;
+    color: hsl(0, 76%, 54%);
+    border: 4px solid lightblue;
+    backdrop-filter: blur(10px);
+}
+
+#restartButton:active{
+    background-color: hsla(150, 8%, 5%, 0.633);
+    border: 4px solid transparent;
+}
