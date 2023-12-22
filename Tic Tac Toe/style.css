@@ -31,6 +31,7 @@ h1{
     text-align: center;
     font-family: 'MV Boli';
     color: rgb(245, 245, 245);
+    user-select: none;
 }
 
 #displayStatus{
