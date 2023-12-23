@@ -1,5 +1,6 @@
 let gameBoard = document.getElementById('gameBoard');
-let context = gameBoard.getContext("2d")
+let context = gameBoard.getContext("2d");
+
 let scoreText = document.getElementById('scoreText');
 let restartButton = document.getElementById('restartButton');
 let gameWidth = gameBoard.width;
@@ -48,7 +49,8 @@ function nextTick(){
         }, 100)
     }
     else{
-        displayGameOver()
+        displayGameOver();
+        
     }
 }
 function clearBoard(){
@@ -147,7 +149,7 @@ function displayGameOver(){
     context.font = "40px Permanent Marker";
     context.fillStyle = 'black';
     context.textAlign = 'center';
-    context.fillText("GAME OVER", gameWidth / 2, gameHeight / 2);
+    context.fillText("GAME OVER !", gameWidth / 2, gameHeight / 2);
     running = false;
 }
 

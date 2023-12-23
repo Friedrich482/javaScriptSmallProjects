@@ -3,21 +3,43 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
+    background-image: url("blackSky.jpg");
 }
 #gameBoard{
-    border: 2px solid black;
+    margin-top: 1vh;
+    border: 6px solid lightblue;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 5px rgba(230, 228, 228, 0.826);
+    backdrop-filter: blur(10px);
 }
 #scoreText{
     font-size: 50px;
     font-family: "consolas";
+    color:whitesmoke
 }
 #restartButton{
     font-size: 30px;
     border-radius: 20px;
     padding: 3px;
     min-width: 150px;
-    background-color: black;
-    color: whitesmoke;
+    background-color: hsla(0, 91%, 47%, 0.751);
+    color: hsla(0, 0%, 3%, 0.888);
     font-family: "Permanent Marker", cursive;
+    border: 6px solid transparent;
+    padding: 3px;
+    box-shadow: 0 0 20px 5px rgba(230, 228, 228, 0.826);
+    backdrop-filter: blur(10px);
+}
+#restartButton:hover{
+    background-color: transparent;
+    color: hsla(0, 0%, 82%, 0.922);
+    border: 6px solid lightblue;
+    backdrop-filter: blur(10px);
+}
+
+#restartButton:active{
+    background-color: hsla(189, 75%, 83%, 0.562);
+    border: 6px solid transparent;
 }
