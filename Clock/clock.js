@@ -18,7 +18,7 @@ function gettingTheDate(){
         greeting = 'Good Afternoon !'
     }
     else if(hours >= 18 && hours < 22){
-        greeting = 'Good Eveninng !'
+        greeting = 'Good Evening !'
     }
     else{
         greeting = 'Good Night !'
