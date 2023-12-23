@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switcher Day Mode Night Mode</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 </head>
+
 <body id="body">
 
     <input type="checkbox" id="checkBox">
-    
+
     <label for="checkBox" id="checkLabel">
         <div id="round">
-            <img src="sun.jpg" alt ="sun" id="sun">
+            <img src="sun.jpg" alt="sun" id="sun">
         </div>
     </label><br>
 
     <h1 id="displayTitle">Actual mode : day</h1>
+    <div class="spacer layer2 flip"></div>
+    <section class='pink'>
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+            <g transform="translate(447.3746231014077 309.62746178943)">
+                <path id="blob1"
+                    d="M144.8 -138.3C194.8 -94.8 247.4 -47.4 241.4 -6C235.4 35.4 170.7 70.7 120.7 113.7C70.7 156.7 35.4 207.4 -1.4 208.8C-38.2 210.2 -76.4 162.4 -122.9 119.4C-169.4 76.4 -224.2 38.2 -234.7 -10.5C-245.2 -59.2 -211.3 -118.3 -164.8 -161.8C-118.3 -205.3 -59.2 -233.2 -5.9 -227.3C47.4 -221.4 94.8 -181.8 144.8 -138.3"
+                    fill="#FF0066"></path>
+                    
+            </g>
+            
+            <g transform="translate(451.073583037725 344.9139374962681)" style="visibility: hidden;">
+                <path id="blob2"
+                    d="M118.2 -135.3C151 -85.3 174 -42.7 179.7 5.7C185.3 54 173.6 108 140.8 137.5C108 167 54 172 9.3 162.7C-35.4 153.4 -70.7 129.7 -100.5 100.2C-130.4 70.7 -154.7 35.4 -170.1 -15.4C-185.6 -66.2 -192.1 -132.5 -162.3 -182.5C-132.5 -232.5 -66.2 -266.2 -11.8 -254.4C42.7 -242.7 85.3 -185.3 118.2 -135.3"
+                    fill="#FF0066"></path>
+            </g>
+        </svg>
+        
+        <script>
+            const tween = KUTE.fromTo(
+                '#blob1',
+                {path: "#blob1"},
+                {path: "#blob2"},
+                {repeat : 999, duration: 3000, yoyo:true}
+            )
+            tween.start()
+        </script>
+    </section>
+
+    <div class="spacer layer2"></div>
     <script src="script.js"></script>
 </body>
+
 </html>

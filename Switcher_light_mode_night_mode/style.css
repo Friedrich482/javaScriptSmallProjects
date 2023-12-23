@@ -3,6 +3,8 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: skyblue;
+    
 }
 
 #checkBox{
@@ -43,5 +45,24 @@ body{
     display: block;
     font-family: 'MV Boli';
     color : hsl(230, 85%, 60%);
+    z-index: 999;
 
+}
+.pink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 400px;
+}
+.layer2{
+    background-image: url('/.layer2.svg');
+}
+
+.flip{
+    transform: rotate(180deg);
+}
+
+.blob-motion{
+    position: absolute;
+    transform: translateY(-20%);
 }

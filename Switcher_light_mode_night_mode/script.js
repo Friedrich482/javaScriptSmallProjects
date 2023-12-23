@@ -23,7 +23,7 @@ checkLabel.addEventListener('click', () =>{
     else{
         checkLabel.style.justifyContent = 'start';
         sun.src = 'sun.jpg';                                     
-        body.style.backgroundColor = 'white';
+        body.style.backgroundColor = 'skyblue';
         round.style.backgroundColor = 'rgb(10, 10, 10)';
         checkLabel.style.backgroundImage = 'url("sun_font.jpg")';
         checkLabel.style.border = '3px solid rgba(9, 49, 62, 0.92)';
