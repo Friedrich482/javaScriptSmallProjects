@@ -1,19 +1,24 @@
 body{
     display: grid;
     justify-items: center;
-    gap: 12vh;
+    align-items: center;
+    gap: 8vh;
     background-color: hsla(0, 0%, 0%, 0.82);
+    margin: 0;
+    
 }
 #gameContainer{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
+    justify-content: flex-end;
     border: 2px solid hsl(307, 60%, 50%);
     min-width: 450px;
     max-width: 550px;
+    height: 60vh;
     border-radius: 30px;
-    background-color:hsl(185, 40%, 60%, 0.78)
+    background-color:hsl(185, 40%, 60%, 0.78);
+    gap:1vh;
 }
 img{
     position: relative;
@@ -30,7 +35,6 @@ img{
 
 #buttons{
     display: flex;
-    
     align-items: center;
     justify-content: center;
 }
@@ -59,6 +63,18 @@ button:active{
     background-color: rgba(212, 197, 35, 0.353);;
 }
 #playerText, #computerText, #resultText{
+    display: inline-block;
     min-width: 300px;
+    
+}
+#resultText{
+    color: rgb(72, 0, 255);
+}
+#playerImg, #computerImg{
+    display: inline;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 20px;
+    border:6px inset hsla(52, 86%, 54%, 0.858);
     
 }

@@ -6,8 +6,8 @@ let gameButtons = document.querySelectorAll('.gameButton');
 
 let player;
 let computer;
-
-
+let playerImg = document.getElementById('playerImg')
+let computerImg = document.getElementById('computerImg');
 gameButtons.forEach(button =>{
     button.addEventListener('click', () =>{
         
@@ -31,15 +31,49 @@ gameButtons.forEach(button =>{
 
         switch(computer){
             case 'ROCK':
+                displayImgs();
                 return player == 'PAPER' ? "YOU WIN !" : "YOU LOSE !";
                 
             case 'PAPER':
+                displayImgs();
                 return player == 'SCISSORS' ?  "YOU WIN !" : "YOU LOSE !";
         
             case 'SCISSORS':
+                displayImgs();
                 return player == 'ROCK' ?  "YOU WIN !" : "YOU LOSE !";
             
         }
         
+    }
+    
+    function displayImgs(){
+        //Display for the player 
+        if(player == 'PAPER'){
+            playerImg.src = 'paper.jpg';
+            playerImg.style.display = 'inline-block';
+        }
+        else if(player == 'ROCK'){
+            playerImg.src = 'rock.jpg';
+            playerImg.style.display = 'inline-block';
+        }
+        else{
+            playerImg.src = 'scissors.jpg'
+            playerImg.style.display = 'inline-block';
+        }
+        
+        //Display for the computer
+
+        if(computer == 'PAPER'){
+            computerImg.src = 'paper.jpg';
+            computerImg.style.display = 'inline-block';
+        }
+        else if(computer == 'ROCK'){
+            computerImg.src = 'rock.jpg'
+            computerImg.style.display = 'inline-block';
+        }
+        else{
+            computerImg.src = 'scissors.jpg'
+            computerImg.style.display = 'inline-block';
+        }
     }
 })
