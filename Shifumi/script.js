@@ -1,6 +1,6 @@
 let playerText = document.getElementById('playerText');
 let computerText = document.getElementById('computerText');
-let resultText = document.getElementById('resultText');
+// let resultText = document.getElementById('resultText');
 
 let gameButtons = document.querySelectorAll('.gameButton');
 
@@ -8,15 +8,17 @@ let player;
 let computer;
 let playerImg = document.getElementById('playerImg')
 let computerImg = document.getElementById('computerImg');
+let labelResult = document.querySelector('#labelResult');
+
 gameButtons.forEach(button =>{
     button.addEventListener('click', () =>{
-        
         player = button.textContent;
         playerText.textContent = `Player : ${player}`
         computerPlays();
-        resultText.textContent = `Result : ${checkWinner()}`;
+        labelResult.textContent = `${checkWinner()}`;
+        
     })
-
+    // 
     function computerPlays(){
         let randNum = Math.floor(Math.random() * 3) + 1;
         computer = gameButtons[randNum - 1].textContent
@@ -26,21 +28,45 @@ gameButtons.forEach(button =>{
     
     function checkWinner(){
         if(computer == player){
-            return "DRAW !"
+            labelResult.style.color = '#2F4F4F'
+            return "DRAW !😐";
+            
         }
 
         switch(computer){
             case 'ROCK':
                 displayImgs();
-                return player == 'PAPER' ? "YOU WIN !" : "YOU LOSE !";
+                if(player == 'PAPER'){
+                    labelResult.style.color = 'green'
+                    return "YOU WIN !😃"
+                }
+                else{
+                    labelResult.style.color = 'red';
+                    return "❌ YOU LOSE !😥"
+                }
+                 
                 
             case 'PAPER':
                 displayImgs();
-                return player == 'SCISSORS' ?  "YOU WIN !" : "YOU LOSE !";
-        
+                if(player == 'SCISSORS'){
+                    labelResult.style.color = 'green'
+                    return "YOU WIN !😃"
+                }
+                else{
+                    labelResult.style.color = 'red';
+                    return "❌ YOU LOSE !😥"
+                }
+
             case 'SCISSORS':
                 displayImgs();
-                return player == 'ROCK' ?  "YOU WIN !" : "YOU LOSE !";
+                if(player == 'ROCK'){
+                    labelResult.style.color = 'green'
+                    return "YOU WIN !😃"
+                }
+                else{
+                    labelResult.style.color = 'red';
+                    return "❌ YOU LOSE !😥"
+                }
             
         }
         
@@ -76,4 +102,6 @@ gameButtons.forEach(button =>{
             computerImg.style.display = 'inline-block';
         }
     }
+    
+    
 })

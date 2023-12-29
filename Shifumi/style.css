@@ -17,7 +17,7 @@ body{
     max-width: 550px;
     height: 60vh;
     border-radius: 30px;
-    background-color:hsl(185, 40%, 60%, 0.78);
+    background-color:hsla(189, 74%, 79%, 0.792);
     gap:1vh;
 }
 img{
@@ -53,14 +53,14 @@ button{
     background-color: rgba(180, 55, 90, 0.653);
 }
 button:hover{
-    border: 3px solid lightblue;
+    border: 3px solid rgb(202, 156, 56);
     background-color: transparent;
     color: hsla(0, 0%, 8%, 0.902)
 }
 
 button:active{
     border: 3px solid rgb(66, 120, 138);
-    background-color: rgba(212, 197, 35, 0.353);;
+    background-color: rgba(46, 44, 28, 0.353);;
 }
 #playerText, #computerText, #resultText{
     display: inline-block;
