@@ -15,7 +15,7 @@ body{
     border: 2px solid hsl(307, 60%, 50%);
     min-width: 450px;
     max-width: 550px;
-    height: 60vh;
+    
     border-radius: 30px;
     background-color:hsla(189, 74%, 79%, 0.792);
     gap:1vh;
@@ -27,7 +27,7 @@ img{
     border-radius: 20%;
     border: 3px solid rgb(115, 182, 204)
 }
-#display{
+.display{
     font-size: 25px;
     font-family: 'consolas';
     font-weight: 700;
@@ -63,7 +63,7 @@ button:active{
     border: 3px solid rgb(66, 120, 138);
     background-color: rgba(46, 44, 28, 0.353);;
 }
-#playerText, #computerText, #resultText{
+#playerText, #computerText, #resultText,#playerScore, #computerScore{
     display: inline-block;
     min-width: 300px;
     
@@ -71,6 +71,7 @@ button:active{
 #resultText{
     color: rgb(72, 0, 255);
 }
+
 #playerImg, #computerImg{
     display: inline;
     height: 10vh;
@@ -78,4 +79,11 @@ button:active{
     border-radius: 20px;
     border:6px inset hsla(52, 86%, 54%, 0.858);
     
+}
+
+#displayPlayerScore{
+    color: hsl(120, 65%, 39%);
+}
+#displayComputerScore{
+    color: hsl(0, 66%, 46%);
 }

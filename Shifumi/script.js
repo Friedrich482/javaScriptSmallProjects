@@ -10,6 +10,12 @@ let playerImg = document.getElementById('playerImg')
 let computerImg = document.getElementById('computerImg');
 let labelResult = document.querySelector('#labelResult');
 
+
+let displayPlayerScore = document.getElementById('displayPlayerScore');
+let displayComputerScore = document.getElementById('displayComputerScore');
+let playerScore = 0, computerScore = 0;
+
+
 function buttonContent(button){
     if(button.textContent == "👊"){
         return "ROCK";
@@ -28,6 +34,7 @@ gameButtons.forEach(button =>{
         playerText.textContent = `Player : ${player}`
         computerPlays();
         labelResult.textContent = `${checkWinner()}`;
+        updateScore();
         
     })
     // 
@@ -49,7 +56,7 @@ gameButtons.forEach(button =>{
             case 'ROCK':
                 displayImgs();
                 if(player == 'PAPER'){
-                    labelResult.style.color = 'green'
+                    labelResult.style.color = 'green';
                     return "YOU WIN !😃"
                 }
                 else{
@@ -61,7 +68,8 @@ gameButtons.forEach(button =>{
             case 'PAPER':
                 displayImgs();
                 if(player == 'SCISSORS'){
-                    labelResult.style.color = 'green'
+                    labelResult.style.color = 'green';
+                    
                     return "YOU WIN !😃"
                 }
                 else{
@@ -82,8 +90,20 @@ gameButtons.forEach(button =>{
             
         }
         
+        
     }
-    
+
+    function updateScore(){
+        if(checkWinner() == 'YOU WIN !😃'){
+            playerScore ++;
+            displayPlayerScore.textContent = `${playerScore}`
+        }
+        else if(checkWinner() == '❌ YOU LOSE !😥'){
+            computerScore ++;
+            displayComputerScore.textContent = `${computerScore}`
+        }
+    }
+
     function displayImgs(){
         //Display for the player 
         if(player == 'PAPER'){
