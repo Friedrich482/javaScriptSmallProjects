@@ -41,21 +41,22 @@ img{
 
 button{
     font-family: 'MV Boli';
-    border: none;
+    border: 5px solid hsl(9, 82%, 52%);
     font-weight: 800;
-    font-size: 19px;
+    font-size: 30px;
     width: 125px;
     min-height: 40px;
     border-radius: 20px;
     margin: 5px;
     padding: 2px;
     color: whitesmoke;
-    background-color: rgba(180, 55, 90, 0.653);
+    background-color: hsla(0, 0%, 5%, 0.947);
 }
 button:hover{
-    border: 3px solid rgb(202, 156, 56);
+    border: 5px solid rgb(202, 156, 56);
     background-color: transparent;
-    color: hsla(0, 0%, 8%, 0.902)
+    color: hsla(0, 0%, 8%, 0.902);
+    backdrop-filter: blur(100px);
 }
 
 button:active{

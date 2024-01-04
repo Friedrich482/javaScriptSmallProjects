@@ -10,9 +10,21 @@ let playerImg = document.getElementById('playerImg')
 let computerImg = document.getElementById('computerImg');
 let labelResult = document.querySelector('#labelResult');
 
+function buttonContent(button){
+    if(button.textContent == "👊"){
+        return "ROCK";
+    }
+    else if(button.textContent == "🖐"){
+        return "PAPER";
+    }
+    else{
+        return "SCISSORS"
+    }
+}
+
 gameButtons.forEach(button =>{
     button.addEventListener('click', () =>{
-        player = button.textContent;
+        player = buttonContent(button);
         playerText.textContent = `Player : ${player}`
         computerPlays();
         labelResult.textContent = `${checkWinner()}`;
@@ -21,7 +33,7 @@ gameButtons.forEach(button =>{
     // 
     function computerPlays(){
         let randNum = Math.floor(Math.random() * 3) + 1;
-        computer = gameButtons[randNum - 1].textContent
+        computer = buttonContent(gameButtons[randNum - 1])
         computerText.textContent = `Computer : ${computer}`
 
     }
