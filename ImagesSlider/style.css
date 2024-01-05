@@ -6,6 +6,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 10vh;
 }
 #slides{
     display: flex;
@@ -18,6 +19,8 @@ body{
     width: 400px;
     height: 400px;
     display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 .displaySlide{
@@ -26,7 +29,7 @@ body{
 
 .dButtons{
     position: absolute;
-    top: 35%;
+    top: 40%;
     height: 50px;
     width: 15vh;
     border-radius: 20px;
@@ -35,7 +38,6 @@ body{
     text-align: center;
     background-color: hsla(0, 3%, 7%, 0.518);
     background-color: hsl(180, 90%, 55%);
-    
 }
 
 #lButton{
@@ -64,4 +66,9 @@ body{
 }
 #admireButton:active{
     background-color: hsla(0, 0%, 0%, 0.613);
+}
+
+@keyframes fade {
+    from {opacity: .2;}
+    to {opacity: 1;}
 }
