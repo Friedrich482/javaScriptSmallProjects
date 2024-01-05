@@ -1,0 +1,16 @@
+#slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slide{
+    width: 400px;
+    height: 400px;
+    display: none;
+}
+
+.displaySlide{
+    display: block;
+}
