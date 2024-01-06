@@ -80,3 +80,17 @@ body{
     from {opacity: .2;}
     to {opacity: 1;}
 }
+#pins{
+    font-size: 33px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vh;
+}
+
+.pinActive{
+    color: hsl(301, 100%, 52%);
+    
+}
