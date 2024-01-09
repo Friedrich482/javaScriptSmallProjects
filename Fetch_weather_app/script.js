@@ -43,7 +43,7 @@ function displayError(error){
     card.appendChild(errorDisplay);
 }
 
-function displayData(data){
+ async function displayData(data){
     const {name : city,
         main: {temp, humidity, feels_like},
         weather : [{description, id}],
@@ -82,6 +82,24 @@ function displayData(data){
     descriptionDisplay.textContent = description;
     card.appendChild(descriptionDisplay);
     
+
+    // The country : 
+    let countryCode = country;
+    let countryDisplay = document.createElement('p');
+    countryDisplay.id = 'countryCodeDisplay';
+
+    // Fetch the country for ISO3166-1.alpha2.json
+    let actualCountry = await fetchCountry(countryCode)
+    console.log(actualCountry)
+    countryDisplay.textContent = `It seems that you're in ${actualCountry}`
+    card.appendChild(countryDisplay);
+}
+
+async function fetchCountry(countryCode){
+    let countriesCode = await fetch('ISO3166-1.alpha2.json');
+    countriesCode = await countriesCode.json();
+    const countryName = await countriesCode[countryCode];
+    return await countryName
 }
 
 function displayEmoji(){
